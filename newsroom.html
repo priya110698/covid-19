@@ -80,6 +80,8 @@
     <!--breadcrumb area-->
     <section class="breadcrumb-area gradient-overlay-2" style="background: url('assets/images/banner/2.jpg');">
         <div class="container">
+            
+        <button onclick="makeGETRequest()">Make the News API call</button>
             <div class="row">
                 <div class="col-xl-12">
                     <div class="site-breadcrumb">
@@ -304,5 +306,39 @@
     <script src="assets/js/scrollUp.min.js"></script>
 
     <script src="assets/js/script.js"></script>
-        </body>
+        <!-- <script type="text/javascript">
+    var url = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c7066a24f9d54e8c85fcfd6c37138a5a';
+var req = new Request(url);
+fetch(req)
+    .then(function(response) {
+        if(response){
+        console.log(response.json());
+    
+        }else{
+            alert('api not found');
+        }
+            })
+        
+    
+    </script> -->
+
+     <script>
+        function makeGETRequest() {
+            const url = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/NewsSearchAPI?autoCorrect=false&pageNumber=1&pageSize=10&q=Taylor+Swift&safeSearch=false"
+            const options = {
+                method: 'GET',
+                headers: {
+                    "X-RapidAPI-Host": "contextualwebsearch-websearch v1.p.rapidapi.com",
+                    "X-RapidAPI-Key": "XXXXXXXXXXXXXXX"
+                },
+            }
+
+            fetch(url, options)
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(e => console.error(e))
+        }
+    </script>
+
+</body>
 </html>
