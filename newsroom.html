@@ -161,34 +161,6 @@
 
     <script src="assets/js/script.js"></script>
         <script type="text/javascript">
-//     var url = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c7066a24f9d54e8c85fcfd6c37138a5a';
-// var req = new Request(url);
-// fetch(req)
-//     .then(function(response) {
-//         if(response){
-//         console.log(response.json());
-    
-//         }else{
-//             alert('api not found');
-//         }
-//             })
-
-// jQuery.ajax({
-//     type:"get",
-//     url:"http://hn.algolia.com/api/v1/search?query=react",
-//     success:function(data){
-//         console.log(data);
-
-//          jQuery.each(data.results, function(i, val) {
-            
-//             /*$(".apnd").append(document.createTextNode(val.term));
-//             $(".apnd").append(document.createTextNode(val.count));*/
-
-//              $('.apnd').append("<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4'><div class='single-blog'><div class='single-blog-img'><img src='assets/images/blog/1.jpg' alt=''><a href='#'><i class='flaticon-drain'></i></a></div><div class='single-blog-content'><div class='blog-meta'><span><a href='#'><i class='flaticon-marsupial'></i>Author</a></span><span><a href='#'><i class='flaticon-category'></i>10/04/2019</a></span><span><a href='#'><i class='flaticon-water'></i>3</a></span></div><h3><a href='blog-details.html'>Excited him Now Natural Saw Passage Offices</a></h3><p>Earum perspiciatis excepturi dolorem id, ullam sint est deserunt </p></div></div></div>");
-//         });
-//     }
-// });
-  
 $.getJSON("https://hn.algolia.com/api/v1/search?query=covid-19",
     function(data){
         console.log(data);
